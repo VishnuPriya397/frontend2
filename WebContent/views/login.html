@@ -1,0 +1,15 @@
+{{error.message}}
+<form>
+<div class ="form-group">
+<span class="glyphicon glyphicon-envelope">   Email Id:</span>
+<input type="email" Data-ng-model="user.email" class="form-control">
+</div>
+
+<div class ="form-group">
+<span class="glyphicon glyphicon-lock">   Password:</span>
+<input type="password" Data-ng-model="user.password" class="form-control">
+</div>
+<div>
+<input type="submit" ng-click="login(user)" value="Login">
+</div>
+</form>
