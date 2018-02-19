@@ -5,7 +5,7 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+<link rel="stylesheet" type="text/css" href="resources/css/register.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,16 +22,16 @@
 <span class="icon-bar"> </span> 
 
 <div class="navbar-header">
-<a class="navbar-brand" href="/"><img src="resources/images/image.png" width="50px" height="50px"></a>
+<a class="navbar-brand" href="#/"><img src="resources/images/image.png" width="50px" height="50px"></a>
 </div>
 <div class="collapse navbar-collapse" id="collapse-example">
 
 <ul class="nav navbar-nav">
 
-<li><a href="#/register"><span class="glyphicon glyphicon-pencil">Register</span></a></li>
-<li><a href="#/login"><span class="glyphicon glyphicon-log-in">Login</span></a></li>
-<li><a href="#/"><span class="glyphicon glyphicon-log-out">Logout</span></a></li>
-<li><a href="#">Welcome {{loggedInUser.firstname}}&nbsp;{{loggedInUser.lastname}}</a>
+<li><a href="#/register" ng-show="loggedInUser.firstname==undefined"><span class="glyphicon glyphicon-pencil" style="color:blue">Register</span></a></li>
+<li><a href="#/login" ng-show="loggedInUser.firstname==undefined"><span class="glyphicon glyphicon-log-in" style="color:blue">Login</span></a></li>
+<li><a href="" ng-click="logout()" ng-show="loggedInUser.firstname!==undefined"><span class="glyphicon glyphicon-log-out" style="color:blue">Logout</span></a></li>
+<li><a href="#" ng-show="loggedInUser.firstname!==undefined" >Welcome {{loggedInUser.firstname}}&nbsp;{{loggedInUser.lastname}}</a>
 </ul>
 </div> 
 
@@ -47,6 +47,8 @@
  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 <script type="text/javascript" 
  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+ <script type="text/javascript" 
+ src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
  <script type="text/javascript" src="js/app.js"></script>
  <script type="text/javascript" src="controllers/usercontroller.js"></script>
   <script type="text/javascript" src="services/userservice.js"></script>
