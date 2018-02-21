@@ -1,0 +1,16 @@
+@CHARSET "ISO-8859-1";
+.body{
+     height: 100%;
+ 	background-repeat: no-repeat;
+ 	background:url("https://previews.123rf.com/images/tabitazn/tabitazn1504/tabitazn150400026/39438227-set-of-doodle-graphic-elements-for-blog-and-graphic-projects-isolated-vector-objects-icons-frames-di.jpg");  
+ 	font-family: 'Oxygen', sans-serif;
+	    background-size: cover;
+}
+
+.body1{
+     height: 100%;
+ 	background-repeat: no-repeat;
+ 	background:url("https://previews.123rf.com/images/natashapankina/natashapankina1607/natashapankina160700052/60457582-hand-drawn-doodle-art-and-craft-tools-icons-set-vector-illustration-art-instruments-symbols-collecti.jpg");  
+ 	font-family: 'Oxygen', sans-serif;
+	    background-size: cover;
+}
