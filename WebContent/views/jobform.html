@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Job Form</title>
+	</head>
+	<body>
+	<div class ="body">
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h3>Job Form:</h3>
+					<form class="" method="" action="#">
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label"><i>Job Title:</i></label>
+							<input type="text" ng-model="job.jobTitle"><br>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label"><i>Job Description:</i></label>
+							<textarea ng-model="job.jobDescription"></textarea><br>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label"><i>Year Of Experience:</i></label>
+							<input type="text" ng-model="job.yrsOfExp"><br>
+						</div><br>
+						<div class="form-group">
+							<label class="col-md-4 control-label"><i>Salary:</i></label>
+							<input type="text" ng-model="job.salary"><br>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label"><i>Skills Required:</i></label>
+							<input type="text" ng-model="job.skillsRequired"><br>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label"><i>Location:</i></label><br>
+							<input type="text" ng-model="job.location"><br>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label"><i>Company Name:</i></label>
+							<input type="text" ng-model="job.companyName"><br>
+						</div>
+						
+						<div align="center"><input type="submit" value="Add Job" ng-click="addJob(job)" class="btn btn-primary btn-lg btn-block login-button"></div>
+						
+						
+					</form>
+				</div>
+			</div>
+		</div>
+</div>		
+</body>
+</html> 

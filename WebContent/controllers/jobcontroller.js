@@ -1,25 +1,25 @@
-app.controller('UserController',function($scope,$rootScope,$location,UserService,$cookieStore)
+app.controller('JobController',function($scope,$rootScope,$location,JobService,$cookieStore)
 		{
 	$scope.registerUser=function(user)
 	{ 
-		UserService.registerUser(user).then(function(response)
-				{
-			alert('Registered Successfully')
+		$scope.addJob=function(job){
+		  JobService.addJob(job).then(
+		   function(response){		  
+			alert('Job details posted Successfully')
 			$location.path('/home')
 		},function(response)
 		{
-			$scope.error=response.data
+			$rootScope.error=response.data
+			if(response.status==401)
+			 $location.path('/login')
 		})
 		
 	}
-	$scope.login=function(user){
-		UserService.login(user).then(function(response){
-			$rootScope.loggedInUser=response.data
-			$cookieStore.put('currentuser',response.data)
-			$location.path('/home')
+		JobService.login(user).then(function(response){
+			Scope.jobs=response.data
 		},function(response){
-			
-			$scope.error=response.data
+			$rootScope.error=response.data
+			if(response.status=404)
 			$location.path('/login')
 		})
 	}
@@ -50,3 +50,5 @@ app.controller('UserController',function($scope,$rootScope,$location,UserService
 		})
     }
 })
+	
+	
