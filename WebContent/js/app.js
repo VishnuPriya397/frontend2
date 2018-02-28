@@ -14,20 +14,23 @@ app.config(function($routeProvider){
 		controller:'UserController'	
 	})
 	.when('/addjob',{
-		templateUrl:'views/jobform.html',
+		emplateUrl:'views/jobform.html',
 		controller:'JobController'
 	})
 	.when('/alljobs',{
-		templateUrl:'views/jobslist.html',
+		templateUrl:'views/joblist.html',
 		controller:'JobController'
 	})
-	.when('/getjob/:id',{
-		templateUrl:'views/jobdetail.html',
+	
+	.when('/getjob',{
+		templateUrl:'views/jobdetails.html',
 		controller:'JobController'
 	})
+
 	.otherwise({
 		templateUrl:'views/home.html'
 	})
+})
 	app.run(function($rootScope,$location,UserService,$cookieStore){
 	if($rootScope.loggedInUser==undefined)
 		$rootScope.loggedInUser=$cookieStore.get("currentuser")
@@ -36,10 +39,11 @@ app.config(function($routeProvider){
 		{
 		UserService.logout().then(function(response)
 				{
-			$rootScope.message="Logged out..."
+			
 				delete $rootScope.loggedInUser
 				$cookieStore.remove("currentuser")
-				$location.path('/login')
+				$rootScope.message="Loggedout Successfully..."
+				$location.path('/home')
 				},function(response)
 				{
 					$rootScope.error=response.data
@@ -47,6 +51,4 @@ app.config(function($routeProvider){
 					$location.path('/login')
 				})
 	}
-})
-	
 })

@@ -34,7 +34,7 @@
 <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="loggedInUser.firstname!==undefined"><span class="glyphicon glyphicon-list-alt" style="color:blue">Job</span><b class="caret"></b></a>
 <ul class="dropdown-menu">
 <li><a href="#/addjob" ng-show="loggedInUser.role=='ADMIN'">Add Job</a></li>
-<li><a href="/#/alljobs">Get all Jobs</a></li>
+<li><a href="#/alljobs" ng-show="loggedInUser.firstname">Get All Jobs</a></li>
 </ul></li>
 <li><a href="" ng-click="logout()" ng-show="loggedInUser.firstname!==undefined"><span class="glyphicon glyphicon-log-out" style="color:blue">Logout</span></a></li>
 <li><a href="#" ng-show="loggedInUser.firstname!==undefined" >Welcome {{loggedInUser.firstname}}&nbsp;{{loggedInUser.lastname}}</a>
