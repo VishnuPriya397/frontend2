@@ -14,36 +14,54 @@ app.config(function($routeProvider){
 		controller:'UserController'	
 	})
 	.when('/addjob',{
-		emplateUrl:'views/jobform.html',
+		templateUrl:'views/job.html',
 		controller:'JobController'
 	})
 	.when('/alljobs',{
-		templateUrl:'views/joblist.html',
+		templateUrl:'views/jobslist.html',
 		controller:'JobController'
+	})
+	.when('/getjob/:id',{
+		templateUrl:'views/jobdetail.html',
+		controller:'JobController'
+	})
+	.when('/addblog',{
+		templateUrl:'views/blogform.html',
+		controller:'BlogPostController'
+	})
+	.when('/blogsnotapproved',{
+		templateUrl:'views/blogsnotapproved.html',
+		controller:'BlogPostController'
+	})
+	.when('/blogsapproved',{
+		templateUrl:'views/blogsapproved.html',
+		controller:'BlogPostController'
+	})
+	.when('/getblog/:id',{
+		templateUrl:'views/blogdetails.html',
+		controller:'BlogDetailsController'
+	})
+	.when('/getblognotapproved/:id',{
+		templateUrl:'views/blogapprovalform.html',
+		controller:'BlogDetailsController'
 	})
 	
-	.when('/getjob',{
-		templateUrl:'views/jobdetails.html',
-		controller:'JobController'
-	})
-
 	.otherwise({
 		templateUrl:'views/home.html'
 	})
 })
 	app.run(function($rootScope,$location,UserService,$cookieStore){
 	if($rootScope.loggedInUser==undefined)
-		$rootScope.loggedInUser=$cookieStore.get("currentuser")
+		$rootScope.loggedInUser=$cookieStore.get('currentuser')
 		
 		$rootScope.logout=function()
 		{
 		UserService.logout().then(function(response)
 				{
-			
-				delete $rootScope.loggedInUser
-				$cookieStore.remove("currentuser")
+				delete $rootScope.loggedInUser;
+				$cookieStore.remove('currentuser')
 				$rootScope.message="Loggedout Successfully..."
-				$location.path('/home')
+				$location.path('/home');
 				},function(response)
 				{
 					$rootScope.error=response.data

@@ -31,11 +31,22 @@
 <li><a href="#/register" ng-show="loggedInUser.firstname==undefined"><span class="glyphicon glyphicon-pencil" style="color:blue">Register</span></a></li>
 <li><a href="#/login" ng-show="loggedInUser.firstname==undefined"><span class="glyphicon glyphicon-log-in" style="color:blue">Login</span></a></li>
 <li><a href="#/edituserprofile" ng-show="loggedInUser.firstname!==undefined"><span class="glyphicon glyphicon-pencil" style="color:blue">Edit Profile</span></a></li>
-<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="loggedInUser.firstname!==undefined"><span class="glyphicon glyphicon-list-alt" style="color:blue">Job</span><b class="caret"></b></a>
+<li class="dropdown"><a href="" class="dropdown-toggle"
+data-toggle="dropdown" ng-show="loggedInUser.firstname!=undefined"><span class="glyphicon glyphicon-tasks" style="color:blue">Job</span><b class="caret"></b></a>
 <ul class="dropdown-menu">
 <li><a href="#/addjob" ng-show="loggedInUser.role=='ADMIN'">Add Job</a></li>
-<li><a href="#/alljobs" ng-show="loggedInUser.firstname">Get All Jobs</a></li>
+<li><a href="#/alljobs">Get all Jobs</a></li>
 </ul></li>
+ 
+ 
+ <li class="dropdown"><a href="" class="dropdown-toggle"
+data-toggle="dropdown" ng-show="loggedInUser.firstname!=undefined"><span class="glyphicon glyphicon-list-alt" style="color:blue">Blog</span><b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="#/addblog">Add Blog</a></li>
+<li><a href="#/blogsnotapproved" ng-show="loggedInUser.role=='ADMIN'">Blogs for approval</a></li>
+<li><a href="#/blogsapproved">Blogs</a></li>
+</ul></li>
+
 <li><a href="" ng-click="logout()" ng-show="loggedInUser.firstname!==undefined"><span class="glyphicon glyphicon-log-out" style="color:blue">Logout</span></a></li>
 <li><a href="#" ng-show="loggedInUser.firstname!==undefined" >Welcome {{loggedInUser.firstname}}&nbsp;{{loggedInUser.lastname}}</a>
 </ul>
@@ -60,4 +71,7 @@
  <script type="text/javascript" src="services/userservice.js"></script>
  <script type="text/javascript" src="controllers/jobcontroller.js"></script>
  <script type="text/javascript" src="services/jobservice.js"></script>
+ <script type="text/javascript" src="controllers/blogcontroller.js"></script>
+ <script type="text/javascript" src="controllers/blogdetailscontroller.js"></script>
+ <script type="text/javascript" src="services/blogservice.js"></script>
 </html>

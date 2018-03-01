@@ -1,30 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Job List</title>
-	</head>
-	<body>
-	<div class ="body2">
-		<div class="container">
-			<div class="row main" style="width:200px">
-				<div class="main-login main-center">
-				<h3>Job List:</h3>
-		 <div class="panel panel-info">
-				      <div class="panel-heading">{{job.jobTitle}}</div>	  
-		<div class="panel-body">
-				  <b>Company Name:</b>{{job.companyName}}<br>
-				  <b>Job Description:</b>{{job.jobDescription}}<br>
-				  <b>Years Of Experience:</b>{{job.yrsOfExp}}<br>
-				  <b>Required:</b>{{job.skillsRequired}}<br>
-				  <b>Location:</b>{{job.location}}<br>  
-				  <b>Salary:</b>{{job.salary}}<br> 
-	     		  <b>Posted On:</b>{{job.job.postedOn | date:'medium'}}<br>     		  
+<div class="container">
+<div class="row" style:color="black">
+<div class="panel panel-info">
+<div class="panel-heading" style:color="black">{{job.jobTitle}}</div>
+<div class="panel-body">
+<b>Job Description</b>:{{job.jobDescription}}<br> 
+<b>SkillsRequired</b>:{{job.skillsRequired}}<br> 
+<b>Location</b>:{{job.location}}<br>
+<b>Years of Exp</b>:{{job.yrsOfExp}}<br>
+<b>Company Name</b>:{{job.companyName}}<br>
+ <b>Salary</b>:{{job.salary}}<br>
+<b>Posted On </b>{{job.postedOn | date:'medium'}}
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<a href="#/alljobs">Back to previous Page</a>
+<a href="#/alljobs">Back to previous page-> Get All Jobs</a>
 </body>
 </html>
