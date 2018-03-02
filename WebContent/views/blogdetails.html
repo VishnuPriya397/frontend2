@@ -1,10 +1,15 @@
+<div class ="body3">
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h5>Blog Details:</h5>
 <div class="panel panel-info">
-<div class="panel-heading">
-{{blog.blogTitle}}<br>
+<div class="panel-heading">{{blog.blogTitle}}<br>
 <b>Posted On: </b> {{blog.postedOn | date:'medium'}}<br>
-<b>Posted By:</b>{{blog.postedBy.firstName}}&nbsp;{{blog.postedBy.lastName}}
+<b>Posted By:</b>{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
 </div>
 <div class="panel-body">
 {{blog.blogContent}}
 </div>
 </div>
+</div></div></div></div>				

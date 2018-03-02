@@ -1,5 +1,9 @@
-<div class="container">
-<div class="row" style="width: 600px">
+<div class ="body3">
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h5>Blogs to Approve:</h5>
+				<div class="row" style="width: 600px">
 <div ng-repeat="blog in blogsWaitingForApproval">
 <div class="panel panel-info">
 <div class="panel-heading">
@@ -7,9 +11,12 @@
 </div>
 <div class="panel-body">
 <b>Posted On: </b> {{blog.postedOn | date:'medium'}}<br>
-<b>Posted By:</b>{{blog.postedBy.firstName}}&nbsp;{{blog.postedBy.lastName}}
+<b>Posted By:</b>{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
 </div>
 </div>
 </div>
 </div>
 </div>
+
+
+</div></div></div></div>	

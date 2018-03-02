@@ -1,0 +1,46 @@
+<span style="color:red">{{error.message}}</span>
+<div class ="body2">
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h5>Add Job:</h5>
+<form>
+<div class="form-group">
+<label>Job Title</label>
+<input type="text" ng-model="job.jobTitle" class="form-control">
+</div>
+
+<div class="form-group">
+<label>Job Description</label>
+<input type="text" ng-model="job.jobDescription" rows="3" cols="10" class="form-control">
+</div>
+
+<div class="form-group">
+<label>SkillsRequired</label>
+<input type="text" ng-model="job.skillsRequired" class="form-control">
+</div>
+
+<div class="form-group">
+<label>Location</label>
+<input type="text" ng-model="job.location" class="form-control">
+</div>
+
+<div class="form-group">
+<label>Salary</label>
+<input type="text" ng-model="job.salary" class="form-control">
+</div>
+
+<div class="form-group">
+<label>Company Name</label>
+<input type="text" ng-model="job.companyName" class="form-control">
+</div>
+
+<div class="form-group">
+<label>Years Of Exp</label>
+<input type="text" ng-model="job.yrsOfExp" class="form-control">
+</div>
+
+<div class="form-group">
+<input type="submit" class="form-control" value="Add Job" ng-click="addJob(job)" class="btn btn-primary btn-lg btn-block login-button">
+</div>
+</form></div></div></div></div>
