@@ -1,19 +1,10 @@
-<div class ="body2">
-		<div class="container">
-			<div class="row main">
-				<div class="main-login main-center">
-<div class="container">
+<div id="secondary-content">
+    <div class="wrapper">
 <b>Search </b><input type="text" ng-model="searchTxt">
-<div class="row" style="width:200px">
 <div ng-repeat="job in jobs | filter:searchTxt | orderBy:'-postedOn'"><br>
-<div class="panel panel-info">
-<div class="panel-heading"><a href="#/getjob/{{job.id}}">{{job.jobTitle}}</a></div>
-
-<div class="panel-body">
-<b>Posted On</b>{{job.postedOn | date:'medium' }}<br>
+<h5><a href="#/getjob/{{job.id}}">{{job.jobTitle}}</a></h5>
+<b>Posted On</b>{{job.postedOn | date:'medium' }}<br><br>
 <b>SkillsRequired</b>{{job.skillsRequired}}
-</div></div>
-</div></div>
-</div></div>
 </div>
-</div></div>
+</div>
+</div>

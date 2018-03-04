@@ -1,16 +1,12 @@
-<div class ="body3">
-<div class="container">
-<div class="row main">
-<div class="main-login main-center">
-<div class="panel panel-info">
-<div class="panel-heading">
-{{blog.blogTitle}}<br>
+<div id="secondary-content">
+    <div class="wrapper">
+<h5>{{blog.blogTitle}}</h5><br>
 <b>posted On:</b> {{blog.postedOn | date:'medium'}}<br>
 <b>Posted By:</b>{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
-</div>
-<div class="panel-body">
+
+<div>
 <p ng-bind-html="content"></p>
-</div>
-</div>
 <button class="btn btn-primary btn-lg btn-block login-button">Approve</button> &nbsp; <button class="btn btn-danger btn-lg btn-block login-button">Reject</button>
-</div></div></div></div>
+</div>
+</div>
+</div>

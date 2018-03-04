@@ -1,33 +1,84 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Simply</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
+ 
 <body>
-<div class="container">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-      </ol>
-       <div class="carousel-inner">
-        <div class="item active">
-        <img class="img-rounded" class="img-responsive center block" src="resources/images/back2.jpg" style="width:100%"  height="50px">
-        </div>
-        <div class="item">
-        <img class="img-rounded" class="img-responsive center block" src="resources/images/back3.jpg" style="width:100%"  height="50px">
-        </div>
-      
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class= "glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only"> Previous </span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class= "glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only"> Next </span>
-      </a>
-  </div>
+    
+    
+    <div id="hero-image">
+    <div class="wrapper">
+        <h2><strong>Science Blog</strong><br/></h2>
+        <a href="#/login" ng-show="loggedInUser.firstname==undefined" class="button-1">Login</a>
+    </div>
+</div>
+ 
+    <div id="primary-content">
+    <div class="wrapper">
+        <article>
+            <h3>Universe</h3>
+            <p> The Universe is all of space and time and their contents, including planets, stars, galaxies, and all other forms of matter and energy. While the size of the entire Universe is still unknown, it is possible to measure the observable universe.</p>
+<p>The earliest scientific models of the Universe were developed by ancient Greek and Indian philosophers and were geocentric, placing Earth at the center of the Universe.Over the centuries, more precise astronomical observations led Nicolaus Copernicus to develop the heliocentric model with the Sun at the center of the Solar System. In developing the law of universal gravitation, Sir Isaac Newton built upon Copernicus's work as well as observations by Tycho Brahe and Johannes Kepler's laws of planetary motion.</p>
+<p>Further observational improvements led to the realization that our Solar System is located in the Milky Way galaxy, which is one of many galaxies in the Universe. It is assumed that galaxies are distributed uniformly and the same in all directions, meaning that the Universe has neither an edge nor a center. Discoveries in the early 20th century have suggested that the Universe had a beginning and that it is expanding at an increasing rate. Roughly eighty percent of mass in the Universe appears to exist in an unknown form called dark matter which cannot be directly observed.</p>
+            <img src="https://i.pinimg.com/originals/7a/1a/17/7a1a179642a6e8c80dec90a2fc2b4d64.jpg"/>
+        </article>
+    </div>
+</div>
+    
+    <div id="secondary-content">
+    <div class="wrapper">
+        <article style="background-image: url('http://nineplanets.org/nh_zoom_bary_03-final.gif');">
+            <div class="overlay">
+                <h5>Two distinct faces of Pluto</h5>
+                <p><small>NASA's New Horizon spacecraft has captured stunning coloured images of Pluto as it gets ready for a close flyby.</small></p>
+                <a href="#" class="more-link">View more</a>
+            </div>
+        </article>
+    </div>
+</div><br><br><br><br><br><br><br>
+ <div id="third-content">
+    <div class="wrapper">
+ <article style="background-image: url('http://cdn.downtoearth.org.in/library/large/2018-02-28/0.11831400_1519801737_4067633894_ff02d69f69_b.jpg');">
+            <div class="overlay">
+                <h5>Hot springs, microbial diversity</h5>
+                <p><small>A total of 454 bacterial isolates were mapped into 57 unique & 4 different bacterial genera.</small></p>
+                <a href="#" class="more-link">View more</a>
+            </div>
+        </article>
+       </div></div><br><br><br><br><br><br><br>
+       <div id="four-content" ng-show="loggedInUser.firstname!==undefined">
+    <div class="wrapper">
+ <article style="background-image: url('https://apod.nasa.gov/apod/image/0003/plan79ceti_art.jpg');">
+            <div class="overlay">
+                <h5>Water in an Exoplanet’s Atmosphere</h5>
+                <p><small>Spitzer Space Telescopes find  water in the atmosphere of a hot, bloated, Saturn.</small></p>
+                <a href="#" class="more-link">View more</a>
+            </div>
+        </article>
+       </div></div> <br><br><br><br><br><br><br>
+       <div id="five-content"  ng-show="loggedInUser.firstname!==undefined">
+    <div class="wrapper">
+ <article style="background-image: url('https://scitechdaily.com/images/Researchers-Develop-New-Approach-to-Personalized-Cancer-Treatment-777x333.jpg');">
+            <div class="overlay">
+                <h5>Personalized Cancer Treatment</h5>
+                <p><small>Non-invasive positron emission tomography (PET)-based imaging approach.</small></p>
+                <a href="#" class="more-link">View more</a>
+            </div>
+        </article>
+       </div></div> 
+        <div class="clear"></div>
+    <div id="cta">
+    <div class="wrapper" ng-show="loggedInUser.firstname==undefined" >
+        <h3>Heard Enough?</h3>
+        <p>Register here for more information</p>
+        <a href="#/register" class="button-2">Get Started</a>
+    </div>
+</div>
+   
 </body>
 </html>

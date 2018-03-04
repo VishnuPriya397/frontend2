@@ -1,19 +1,11 @@
-<div class ="body3">
-<div class="container">
-<div class="row main">
-<div class="main-login main-center">
-<div class="row">
 <div ng-repeat="blog in blogsApproved">
-<div class="panel panel-info">
-<div class="panel-heading">
-<a href="#/getblog/{{blog.id}}">{{blog.blogTitle}}</a>
-</div>
+<div id="secondary-content">
+    <div class="wrapper">
+<h5><a href="#/getblog/{{blog.id}}">{{blog.blogTitle}}</a></h5>
+
 <div class="panel-body">
 <b>Posted On: </b> {{blog.postedOn | date:'medium'}}<br>
 <b>Posted By:</b>{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
 </div>
 </div>
-</div>
-</div>
-</div>
-</div></div></div>
+</div></div>

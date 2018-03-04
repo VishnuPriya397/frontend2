@@ -1,20 +1,15 @@
-<div class ="body2">
-		<div class="container">
-			<div class="row main">
-				<div class="main-login main-center">
-				<div class="panel panel-info">
-<div class="panel-heading">{{job.jobTitle}}</div>
-<div class="panel-body">
+<div id="secondary-content">
+    <div class="wrapper">
+    <h5>{{job.jobTitle}}</h5>
+
 <b>Job Description</b>:{{job.jobDescription}}<br> 
 <b>SkillsRequired</b>:{{job.skillsRequired}}<br> 
 <b>Location</b>:{{job.location}}<br>
 <b>Years of Experience</b>:{{job.yrsOfExp}}<br>
 <b>Company Name</b>:{{job.companyName}}<br>
  <b>Salary</b>:{{job.salary}}<br>
-<b>Posted On </b>{{job.postedOn | date:'medium'}}
-</div>
-</div>
-</div></div></div></div>	
+<b>Posted On </b>{{job.postedOn | date:'medium'}}	
 <a href="#/alljobs">Get All Jobs</a>			
+</div></div>
 				
 				
