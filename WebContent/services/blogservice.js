@@ -15,5 +15,13 @@ blogService.addBlog=function(blog) {
 	 blogService.getBlog=function(id) {
 		 return $http.get("http://localhost:8181/middleware/getblog/"+id)
 	 }
+	 
+	 blogService.approve=function(blog) {
+		 return $http.put("http://localhost:8181/middleware/approve",blog)
+	 }
+	 blogService.reject=function(blog,rejectionReason) {
+		 return $http.put("http://localhost:8181/middleware/reject/"+rejectionReason,blog)
+	 }
+	 
 	return blogService;
 })

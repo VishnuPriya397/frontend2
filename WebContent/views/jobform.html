@@ -1,41 +1,22 @@
-<span style="color:red">{{error.message}}</span>
-<form>
-<div class="form-group">
-<label>Job Title</label>
-<input type="text" ng-model="job.jobTitle" class="form-control">
-</div>
-
-<div class="form-group">
-<label>Job Description</label>
-<input type="text" ng-model="job.jobDescription" rows="3" cols="10" class="form-control">
-</div>
-
-<div class="form-group">
-<label>SkillsRequired</label>
-<input type="text" ng-model="job.skillsRequired" class="form-control">
-</div>
-
-<div class="form-group">
-<label>Location</label>
-<input type="text" ng-model="job.location" class="form-control">
-</div>
-
-<div class="form-group">
-<label>Salary</label>
-<input type="text" ng-model="job.salary" class="form-control">
-</div>
-
-<div class="form-group">
-<label>Company Name</label>
-<input type="text" ng-model="job.companyName" class="form-control">
-</div>
-
-<div class="form-group">
-<label>Years Of Exp</label>
-<input type="text" ng-model="job.yrsOfExp" class="form-control">
-</div>
-
-<div class="form-group">
-<input type="submit" class="form-control" value="Add Job" ng-click="addJob(job)" class="btn btn-success btn-lg btn-block login-button">
-</div>
-</form>
+<div id="features">
+    <div class="wrapper">
+        <ul>
+            <li class="feature-3">
+            <span style="color:red">{{error.message}}</span>
+                <h4>Job Title:</h4>
+                <p><input type="text" ng-model="job.jobTitle" class="form-control"></p>
+                <h4>Job Description:</h4>
+                <p><input type="text" ng-model="job.jobDescription" rows="3" cols="10" class="form-control"></p>
+                <h4>Skills Required:</h4>
+                <p><input type="text" ng-model="job.skillsRequired" class="form-control"></p>
+                <h4>Location:</h4>
+                <p><input type="text" ng-model="job.location" class="form-control"></p>
+                <h4>Salary:</h4>
+                <p><input type="text" ng-model="job.salary" class="form-control"></p>
+                <h4>Company Name:</h4>
+                <p><input type="text" ng-model="job.companyName" class="form-control"></p>
+                <h4>Years Of Experience:</h4>
+                <p><input type="text" ng-model="job.yrsOfExp" class="form-control"></p>
+                <a href="" ng-click="addJob(job)" class="button-1">Add Job</a>
+            </li>
+            </ul></div></div>

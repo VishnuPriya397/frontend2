@@ -1,25 +1,14 @@
-<span style="color:red" ng-show="error.message!=undefined">{{error.message}}</span>
-<span style="color:blue" ng-show="message!=undefined">{{message}}</span>
-<span style="color:red">{{error.message}}</span>
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Email</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="email" Data-ng-model="user.email" class="form-control" placeholder="Enter your Email"/>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Password</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" Data-ng-model="user.password" class="form-control" placeholder="Enter your Password"/>
-								</div>
-							</div>
-						</div>
-						<div class="form-group ">
-						    <input type="submit" ng-click="login(user)" value="Login" class="btn btn-primary btn-lg btn-block login-button">
-						</div>
-		
+<div id="features">
+    <div class="wrapper">
+        <ul>
+            <li class="feature-1">
+            <span style="color:red" ng-show="error.message!=undefined">{{error.message}}</span>
+            <span style="color:blue" ng-show="message!=undefined">{{message}}</span>
+            <span style="color:red">{{error.message}}</span>
+                <h4>Email:</h4>
+                <p><input type="email" Data-ng-model="user.email" class="form-control" placeholder="Enter Email"/></p>
+                <h4>Password:</h4>
+                <p><input type="password" Data-ng-model="user.password" class="form-control" placeholder="Enter Password"/></p>
+                <a href="" ng-click="login(user)" class="button-1">Login</a>
+            </li>
+            </ul></div></div>

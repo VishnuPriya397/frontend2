@@ -118,6 +118,26 @@ header nav ul li a {
     color: #fff;
 }
 
+#features ul {
+    margin: 80px 0;
+}
+#features ul li {
+    width: 300px;
+    padding-top: 140px;
+    float: center;
+    margin-right: 10px;
+    text-align: center;
+}
+#features ul li.feature-1 {
+    background: url('https://www.shareicon.net/data/128x128/2015/09/09/98455_man_512x512.png') no-repeat top center;
+}
+#features ul li.feature-2 {
+    background: url('https://www.shareicon.net/data/128x128/2015/09/28/108587_edit_512x512.png') no-repeat top center;
+}
+#features ul li.feature-3 {
+    background: url('https://www.shareicon.net/data/128x128/2017/05/30/886503_case_512x512.png') no-repeat top center;
+}
+
 #primary-content {
     background-color: #f8fafa;
     padding: 60px 0;

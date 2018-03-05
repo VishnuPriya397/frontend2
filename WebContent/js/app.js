@@ -46,6 +46,21 @@ app.config(function($routeProvider){
 		controller:'BlogDetailsController'
 	})
 	
+	.when('/pluto',{
+		templateUrl:'views/pluto.html'
+	})
+	
+	.when('/hot',{
+		templateUrl:'views/hot.html'
+	})
+	
+	.when('/cancer',{
+		templateUrl:'views/cancer.html'
+	})
+	
+	.when('/isro',{
+		templateUrl:'views/isro.html'
+	})
 	.otherwise({
 		templateUrl:'views/home.html'
 	})
