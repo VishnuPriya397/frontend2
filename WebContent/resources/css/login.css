@@ -58,6 +58,39 @@ small {
     color: #777;
     font-style: italic;
 }
+
+.rw-number-notification{
+	position: absolute;
+	top: -7px;
+	right: -6px;
+	padding: 3px 3px 2px 3px;
+	background-color: #ff0000;
+	color: white;
+	font-family: 'Crete Round', serif;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px sliver; 
+}
+
+.dropdown-content{
+	display: block;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 250px;
+	box-shadow: 0px 8px 16px rgba(0,0,0,0.2); 
+	padding: 12px 16px;
+	z-index: 1;
+}
+
+.liked{
+	color:red;
+}
+
+.default{
+	color:black;
+}
+
 .clear {
     clear: both;
 }
@@ -115,6 +148,40 @@ header nav ul li a {
 }
 .button-1:hover {
     background-color: #02b8dd;
+    color: #fff;
+}
+
+.button-3 {
+    display: block;
+    text-align: center;
+    background: #444;
+    border-radius: 3px;
+    color: #fff;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 0 auto;
+}
+.button-3:hover {
+    background-color: #00ff00;
+    color: #fff;
+}
+
+.button-4{
+    display: block;
+    text-align: center;
+    background: #444;
+    border-radius: 3px;
+    color: #fff;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 0 auto;
+}
+.button-4:hover {
+    background-color: #ff0000;
     color: #fff;
 }
 
