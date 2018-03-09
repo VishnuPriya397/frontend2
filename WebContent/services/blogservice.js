@@ -31,6 +31,14 @@ blogService.addBlog=function(blog) {
 	blogService.updateLikes=function(id) {
 		 return $http.put("http://localhost:8181/middleware/updateLikes/"+id)
 	}
+	
+	blogService.addComment=function(blogComment){
+	    return $http.post("http://localhost:8181/middleware/addcomment",blogComment)
+	    }
+
+	blogService.getBlogComments=function(id){
+	    return $http.get("http://localhost:8181/middleware/blogcomments/"+id)
+	    }
 	 
 	return blogService;
 })
