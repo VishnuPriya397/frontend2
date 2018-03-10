@@ -47,6 +47,16 @@ a {
     text-decoration: none;
     color: #444;
 }
+
+textarea {
+	font-size: 15px;
+    color: #444;
+    font-weight: bold;
+    text-align: center;
+	margin-bottom: 20px;
+	height: 40px;
+	width: 400px;
+}
 a:hover {
     color: #02b8dd;
 }
@@ -182,6 +192,23 @@ header nav ul li a {
 }
 .button-4:hover {
     background-color: #ff0000;
+    color: #fff;
+}
+
+.button-5{
+    display: block;
+    text-align: center;
+    background: #444;
+    border-radius: 3px;
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 0 auto;
+}
+.button-5:hover {
+    background-color: #02b8dd;
     color: #fff;
 }
 

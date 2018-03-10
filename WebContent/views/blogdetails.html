@@ -8,15 +8,15 @@
 <p ng-bind-html="content"></p>
 </div>
 <a><span class= "glyphicon glyphicon-heart-empty" ng-class="isLiked? 'liked' : 'default'" ng-click="updateLikes(blog.id)">
-</span></a>{{blog.likes}}
+</span></a>{{blog.likes}} &nbsp;
+<a ng-click="onShowCommets()"><i class="fa fa-comment-o" style="font-size:18px"></i>{{comments.length}}</a><br><br>
+
 {{exceptionMessage.message}}
 <textarea rows="1" cols="10" ng-model="commentTxt"></textarea>
-<button type="button" class="btn btn-primary" ng-click="addComment(blog,commentTxt)">PostComment</button>
-<br>
-<a ng-click="onShowCommets()">{{comments.length}} comments</a><br>
+<a href="" ng-click="addComment(blog,commentTxt)"><i class="fa fa-paper-plane-o" style="font-size:25px;color:green" aria-hidden="true"></i></a>
+
 <ul style="list-style:none" ng-show="showComments">
 <li ng-repeat="comment in comments | orderBy:'-commentedOn'" >
-
 {{comment.commentTxt}}&nbsp;<b>CommentedBy</b>{{comment.commentedBy.firstname}}&nbsp;<b>CommentedOn</b>{{comment.commentedOn | date:"medium"}}
 </li>
 </ul>
