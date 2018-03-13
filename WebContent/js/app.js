@@ -50,7 +50,16 @@ app.config(function($routeProvider){
 		templateUrl:'views/notificationdetails.html',
 		controller:'NotificationController'
 	})
-	 .when('/home',{
+	
+	.when('/uploadprofile',{
+		templateUrl:'views/uploadprofile.html'
+	})
+	
+	.when('/profilepicture',{
+		templateUrl:'views/profilepicture.html'
+	})
+	
+	.when('/home',{
 		templateUrl:'views/home.html',
 		controller:'NotificationController'
 	})

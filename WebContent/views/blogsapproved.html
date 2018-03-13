@@ -4,8 +4,8 @@
 <h5><a href="#/getblog/{{blog.id}}">{{blog.blogTitle}}</a></h5>
 
 <div class="panel-body">
-<b>Posted On: </b> {{blog.postedOn | date:'medium'}}<br>
-<b>Posted By:</b>{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
+<b>On: </b> {{blog.postedOn | date:'medium'}}<br>
+<b>By:</b><img src="http://localhost:8181/middleware/getimage/{{blog.postedBy.email}}" height="20px" width="20px" class="img-circle">&nbsp;{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
 </div>
 </div>
 </div></div>

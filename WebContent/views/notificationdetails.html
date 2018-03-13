@@ -1,8 +1,9 @@
-<div id="secondary-content">
-<div class="wrapper">
-<div>
-BlogPost titled "<b>{{n.blogTitle}}</b>" is {{n.approvalStatus}}
-<div ng-show="n.approvalStatus=='Rejected'">for the reason {{n.rejectionReason}}</div>
+<div id="primary-content">
+    <div class="wrapper">
+    <div>
+BlogPost titled <b>{{notification.blogTitle}}</b> is {{notification.approvalStatus}}
+<div ng-show="notification.approvalStatus=='Rejected'">for the reason'{{notification.rejectionReason}}'
 </div>
-</div>
-</div>
+</div>		
+</div></div>
+				

@@ -1,4 +1,4 @@
-app.controller('NotificationController',function($scope,$location,$rootScope,$routeParams,NotificationService) {
+app.controller('NotificationController',function($scope,$location,$rootScope,NotificationService,$routeParams) {
 	var id=$routeParams.id
 	function getNotificationsNotViewed() {
 		NotificationService.getNotificationsNotViewed().then(
@@ -16,7 +16,6 @@ app.controller('NotificationController',function($scope,$location,$rootScope,$ro
 		NotificationService.getNotification(id).then(
 				function(response) {
 					$scope.notification=response.data
-				
 				},
 				function(response) {
 					$rootScope.error=response.data
