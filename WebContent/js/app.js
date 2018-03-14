@@ -5,42 +5,52 @@ app.config(function($routeProvider){
 		templateUrl:'views/registrationform.html',
 		controller:'UserController'
 	})
+	
 	.when('/login',{
 		templateUrl:'views/login.html',
 		controller:'UserController'
 	})
+	
 	.when('/edituserprofile',{
 		templateUrl:'views/edituserprofile.html',
 		controller:'UserController'	
 	})
+	
 	.when('/addjob',{
 		templateUrl:'views/jobform.html',
 		controller:'JobController'
 	})
+	
 	.when('/alljobs',{
 		templateUrl:'views/jobslist.html',
 		controller:'JobController'
 	})
+	
 	.when('/getjob/:id',{
 		templateUrl:'views/jobdetail.html',
 		controller:'JobController'
 	})
+	
 	.when('/addblog',{
 		templateUrl:'views/blogform.html',
 		controller:'BlogPostController'
 	})
+	
 	.when('/blogsnotapproved',{
 		templateUrl:'views/blogsnotapproved.html',
 		controller:'BlogPostController'
 	})
+	
 	.when('/blogsapproved',{
 		templateUrl:'views/blogsapproved.html',
 		controller:'BlogPostController'
 	})
+	
 	.when('/getblog/:id',{
 		templateUrl:'views/blogdetails.html',
 		controller:'BlogDetailsController'
 	})
+	
 	.when('/getblognotapproved/:id',{
 		templateUrl:'views/blogapprovalform.html',
 		controller:'BlogDetailsController'
@@ -57,6 +67,11 @@ app.config(function($routeProvider){
 	
 	.when('/profilepicture',{
 		templateUrl:'views/profilepicture.html'
+	})
+	
+	.when('/suggestedusers',{
+		templateUrl:'views/suggestedfriends.html',
+		controller:'FriendController'
 	})
 	
 	.when('/home',{
@@ -79,6 +94,7 @@ app.config(function($routeProvider){
 	.when('/isro',{
 		templateUrl:'views/isro.html'
 	})
+	
 	.otherwise({
 		templateUrl:'views/home.html'
 	})
