@@ -1,0 +1,19 @@
+<div id="primary-content">
+<div class="wrapper"> 
+<h3>Friend Requests</h3>
+<table>
+<tr ng-repeat="request in pendingRequests | orderBy:'firstname.length'">
+<td>
+<img src="http://localhost:8181/middleware/getimage/{{request.fromId.email}}" height="30px" width="30px" class="img-circle">
+</td>  
+<td>
+{{request.fromId.firstname}} &nbsp;{{request.fromId.lastname}}<br>
+</td>
+<td>
+<a ng-click="acceptRequest(request)"><span class= "glyphicon glyphicon-ok"></span></a>
+<a ng-click="deleteRequest(request)"><span class= "glyphicon glyphicon-remove" style="color:red"></span></a>
+</td>
+</tr>
+</table>
+</div>
+</div>

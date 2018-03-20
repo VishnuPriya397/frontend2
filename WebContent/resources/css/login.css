@@ -237,6 +237,7 @@ header nav ul li a {
     padding: 60px 0;
     text-align: center;
 }
+
 #primary-content h3 {
     display: block;
     margin: 0 auto 20px auto;
@@ -246,6 +247,30 @@ header nav ul li a {
 }
 #primary-content a img {
     margin: 20px 0;
+}
+
+#primary-content li {
+    display: block;
+    margin: 20px 0;
+    width: 400px;
+    padding: 60px 0;
+    align: center;
+}
+
+#primary-content ul {
+    display: block;
+    margin: 20px 0;
+    width: 400px;
+    padding: 60px 0;
+    align: center;
+}
+
+#primary-content table{
+	display: block;
+    margin: 0 auto 20px auto;
+    width: 400px;
+    padding: 60px 0;
+    align: center;
 }
 
 #secondary-content {

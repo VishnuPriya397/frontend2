@@ -72,6 +72,17 @@ app.config(function($routeProvider){
 	.when('/suggestedusers',{
 		templateUrl:'views/suggestedfriends.html',
 		controller:'FriendController'
+
+	})
+	
+	.when('/pendingrequests',{
+		templateUrl:'views/pendingrequests.html',
+		controller:'FriendController'
+	})
+	
+	.when('/friends',{
+		templateUrl:'views/friendsList.html',
+		controller:'FriendController'
 	})
 	
 	.when('/home',{

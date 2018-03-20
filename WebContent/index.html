@@ -49,7 +49,9 @@ data-toggle="dropdown" ng-show="loggedInUser.firstname!=undefined">Blog<b class=
 <li class="dropdown"><a href="" class="dropdown-toggle"
 data-toggle="dropdown" ng-show="loggedInUser.firstname!=undefined"><span class= "glyphicon glyphicon-user"></span></a>
 <ul class="dropdown-menu">
-<li><a href="#/suggestedusers">Suggested Friends</a></li>
+<li><a href="#/friends">Friends</a></li>
+<li><a href="#/suggestedusers">Find Friend</a></li>
+<li><a href="#/pendingrequests">Friend Requests</a></li>
 </ul></li>
 
 <li class="dropdown"><a href="" class="dropdown-toggle"
@@ -59,6 +61,7 @@ data-toggle="dropdown" ng-show="loggedInUser.firstname">
 <ul class="dropdown-menu">
 <span class="dropdown-content">
 <li ng-repeat="n in notifications">
+<span ng-show="getNotificationsNotViewed.length==0">No pending Notifications</span>
 <a href="#/getnotification/{{n.id}}">Blog titled &nbsp;<b>"{{n.blogTitle}}"</b>&nbsp; approval status is updated</a>
 <hr>
 </li>

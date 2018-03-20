@@ -1,0 +1,10 @@
+<div id="primary-content">
+<div class="wrapper"> 
+<h3>Friends: </h3>    
+<li ng-repeat="friend in friends | orderBy:'firstname.length'">
+<img src="http://localhost:8181/middleware/getimage/{{friend.email}}" height="30px" width="30px" class="img-circle">
+{{friend.firstname}} &nbsp; {{friend.lastname}}<br>
+<hr>
+</li>
+</div>
+</div>
