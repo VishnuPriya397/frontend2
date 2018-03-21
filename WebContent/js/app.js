@@ -85,6 +85,11 @@ app.config(function($routeProvider){
 		controller:'FriendController'
 	})
 	
+	.when('/chat',{
+		templateUrl:'views/chat.html',
+		controller:'ChatController'
+	})
+	
 	.when('/home',{
 		templateUrl:'views/home.html',
 		controller:'NotificationController'
