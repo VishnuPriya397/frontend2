@@ -2,7 +2,7 @@ app.controller('BlogPostController',function($scope,$location,$rootScope,BlogSer
 	$scope.addBlog=function(blog) {
 		BlogService.addBlog(blog).then(
 				function(response) {
-					alert('Blogpost is added successfully and it is waiting for approval');
+					alert('Blogpost added successfully and waiting for approval');
 					$location.path('/home')
 				},
 				function(response) {

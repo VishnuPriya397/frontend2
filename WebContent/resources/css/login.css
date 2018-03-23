@@ -265,12 +265,16 @@ header nav ul li a {
     align: center;
 }
 
-#primary-content table{
+#primary-content table {
 	display: block;
     margin: 0 auto 20px auto;
     width: 400px;
-    padding: 60px 0;
     align: center;
+}
+
+#primary-content table td {
+	padding: 20px;
+    text-align: center;
 }
 
 #secondary-content {

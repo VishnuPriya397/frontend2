@@ -1,10 +1,15 @@
 <div id="primary-content">
 <div class="wrapper"> 
-<h3>Friends: </h3>    
-<li ng-repeat="friend in friends | orderBy:'firstname.length'">
+<h3>Friends: </h3>  
+<table>
+<tr ng-repeat="friend in friends | orderBy:'firstname.length'">
+<td>
 <img src="http://localhost:8181/middleware/getimage/{{friend.email}}" height="30px" width="30px" class="img-circle">
-{{friend.firstname}} &nbsp; {{friend.lastname}}<br>
-<hr>
-</li>
+</td>
+<td>
+<a href="#/getfriend/{{friend.id}}">{{friend.firstname}} &nbsp;{{friend.lastname}}<br></a>
+</td>
+</tr>
+</table>  
 </div>
 </div>
