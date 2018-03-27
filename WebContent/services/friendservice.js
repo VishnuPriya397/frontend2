@@ -21,10 +21,6 @@ app.factory('FriendService',function($http){
 	friendService.getAllFriends=function() {
 		return $http.get("http://localhost:8181/middleware/friends")
 	}
-	
-	friendService.getFriend=function(id) {
-		return $http.get("http://localhost:8181/middleware/getfriend/"+id);
-	}
-	
+
 	return friendService;
 })

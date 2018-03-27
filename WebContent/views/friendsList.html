@@ -1,13 +1,14 @@
 <div id="primary-content">
 <div class="wrapper"> 
 <h3>Friends: </h3>  
+<span ng-if="friends.length==0">No friends found</span>
 <table>
 <tr ng-repeat="friend in friends | orderBy:'firstname.length'">
 <td>
 <img src="http://localhost:8181/middleware/getimage/{{friend.email}}" height="30px" width="30px" class="img-circle">
 </td>
 <td>
-<a href="#/getfriend/{{friend.id}}">{{friend.firstname}} &nbsp;{{friend.lastname}}<br></a>
+{{friend.firstname}} &nbsp;{{friend.lastname}}<br>
 </td>
 </tr>
 </table>  

@@ -1,0 +1,13 @@
+<div id="primary-content">
+    <div class="wrapper">
+<h3>Search List </h3>
+<span ng-if="users.length==0">No users found</span>
+<ul style="list-style:none">
+<li ng-repeat="user in users">
+{{user.firstname}} &nbsp; {{user.lastname}} <br>
+{{user.email}}<br>
+<hr>
+</li>
+</ul>
+</div>
+</div>

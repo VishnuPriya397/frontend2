@@ -30,8 +30,7 @@ app.controller('UserController',function($scope,$rootScope,$location,UserService
 				},
 				function(response){
 					if(response.status==401)
-						$location.path('/login')
-				
+						$location.path('/login')	
 				})
 }
 	$scope.updateUser=function(user){
@@ -49,4 +48,14 @@ app.controller('UserController',function($scope,$rootScope,$location,UserService
 			
 		})
     }
+	
+	$rootScope.searchUser=function(user) {
+		UserService.searchUser(user).then(function(response) {
+			$scope.users=response.data
+		},function(response) {
+			$scope.error=response.data
+			$location.path('/login')
+		})
+	}
+	
 })

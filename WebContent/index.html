@@ -54,7 +54,7 @@ data-toggle="dropdown" ng-show="loggedInUser.firstname!=undefined"><span class= 
 <li><a href="#/pendingrequests">Friend Requests</a></li>
 </ul></li>
 
-<li><a href="#chat" ng-show="loggedInUser.firstname!=undefined"><span class= "glyphicon glyphicon-comment"></span></a></li>
+<li><a href="#/chat" ng-show="loggedInUser.firstname!=undefined"><span class= "glyphicon glyphicon-comment"></span></a></li>
 
 <li class="dropdown"><a href="" class="dropdown-toggle"
 data-toggle="dropdown" ng-show="loggedInUser.firstname">
@@ -76,6 +76,14 @@ data-toggle="dropdown" ng-show="loggedInUser.firstname!=undefined"><span class= 
 <li><a href="#/edituserprofile" ng-show="loggedInUser.firstname!==undefined">Edit Profile</a></li>
 <li><a href="" ng-click="logout()" ng-show="loggedInUser.firstname!==undefined">Logout</a></li>
 </ul></li>
+
+<li>
+<div class="navbar buttons" ng-show="loggedInUser.firstname!=undefined">
+<input type="text" placeholder="search user" class="navbar search" ng-model="user">
+<a href="#/searchuser" ng-click="searchUser(user)">
+<span class= "glyphicon glyphicon-search"></span></a>
+</div>
+</li>
 </ul>
 </nav>
 </div>
@@ -120,9 +128,9 @@ data-toggle="dropdown" ng-show="loggedInUser.firstname!=undefined"><span class= 
  <script type="text/javascript" src="services/notificationservice.js"></script>
  <script type="text/javascript" src="controllers/friendcontroller.js"></script>
  <script type="text/javascript" src="services/friendservice.js"></script>
- <script src="resources/js/sockjs.js"></script>
- <script src="resources/js/stomp.js"></script>
- <script type="text/javascript" src="controller/chatcontroller.js"></script>
- <script type="text/javascript" src="service/chatservice.js"></script>
+ <script type="text/javascript" src="services/chatservice.js"></script>
+ <script type="text/javascript" src="controllers/chatcontroller.js"></script>
+ <script type="text/javascript" src="resources/js/sockjs.min.js"></script>
+ <script type="text/javascript" src="resources/js/stomp.min.js"></script>
  
 	  </html>

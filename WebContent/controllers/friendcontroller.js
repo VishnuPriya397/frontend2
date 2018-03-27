@@ -1,5 +1,5 @@
-app.controller('FriendController', function($scope, $location, $rootScope,
-		FriendService) {
+app.controller('FriendController', function($scope, $location, $rootScope,FriendService,$routeParams) {
+	var id=$routeParams.id
 	function getAllSuggestedUsers() {
 		FriendService.getAllSuggestedUsers().then(function(response) {
 			$scope.suggestedUsers = response.data
@@ -57,7 +57,7 @@ app.controller('FriendController', function($scope, $location, $rootScope,
 		if (response.status == 401)
 			$location.path('/login')
 	})
-
+	
 	if (id != undefined) {
 		FriendService.getFriend(id).then(function(response) {
 			$scope.friend = response.data
@@ -67,6 +67,7 @@ app.controller('FriendController', function($scope, $location, $rootScope,
 				$location.path('/login')
 		})
 	}
+
 
 	getAllSuggestedUsers()
 	getPendingRequests()

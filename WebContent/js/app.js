@@ -16,6 +16,11 @@ app.config(function($routeProvider){
 		controller:'UserController'	
 	})
 	
+	.when('/searchuser',{
+		templateUrl:'views/users.html',
+		controller:'UserController'
+	})
+	
 	.when('/addjob',{
 		templateUrl:'views/jobform.html',
 		controller:'JobController'
@@ -85,14 +90,9 @@ app.config(function($routeProvider){
 		controller:'FriendController'
 	})
 	
-	.when('/getfriend/:id',{
-		templateUrl:'views/frienddetail.html',
-		controller:'FriendController'
-	})
-	
 	.when('/chat',{
 		templateUrl:'views/chat.html',
-		controller:'ChatController'
+		controller:'ChatCtrl'
 	})
 	
 	.when('/home',{
