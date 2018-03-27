@@ -22,7 +22,7 @@ app.factory('UserService', function($http) {
 		return $http.put("http://localhost:8181/middleware/updateuser", user)
 	}
 	userService.searchUser=function(user) {
-		return $http.get("http://localhost:8181/project2backend/searchuser/"+user)
+		return $http.get("http://localhost:8181/middleware/searchuser/"+user)
 	}
 
 	return userService;
