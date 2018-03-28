@@ -56,6 +56,5 @@ app.controller('UserController',function($scope,$rootScope,$location,UserService
 			$scope.error=response.data
 			$location.path('/login')
 		})
-	}
-	
+	}	
 })

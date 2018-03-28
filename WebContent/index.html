@@ -76,14 +76,15 @@ data-toggle="dropdown" ng-show="loggedInUser.firstname!=undefined"><span class= 
 <li><a href="#/edituserprofile" ng-show="loggedInUser.firstname!==undefined">Edit Profile</a></li>
 <li><a href="" ng-click="logout()" ng-show="loggedInUser.firstname!==undefined">Logout</a></li>
 </ul></li>
-
-<li>
-<div class="navbar buttons" ng-show="loggedInUser.firstname!=undefined">
-<input type="text" placeholder="search user" class="navbar search" ng-model="user" height="50px" width="50px">
-<a href="#/searchuser" ng-click="searchUser(user)">
-<span class= "glyphicon glyphicon-search"></span></a>
+<br>
+<li> 
+ <div class="navbar buttons" ng-show="loggedInUser.firstname!=undefined">
+<input type="text" placeholder="search" class="navbar search" ng-model="user" height="30px" width="50px">
+<a href="#/searchuser" class="btn navbar-btn btn-primary pull-right" type="button" ng-click="searchUser(user)">
+<i class="fa fa-search"></i></a>
 </div>
 </li>
+
 </ul>
 </nav>
 </div>

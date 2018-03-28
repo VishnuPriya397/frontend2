@@ -1,9 +1,10 @@
 <div id="primary-content">
     <div class="wrapper">
-<h3>Search List </h3>
+<h3>Search List</h3><br>
 <span ng-if="users.length==0">No users found</span>
 <ul style="list-style:none">
 <li ng-repeat="user in users">
+<img src="http://localhost:8181/middleware/getimage/{{user.email}}" height="50px" width="50px" class="img-circle">
 {{user.firstname}} &nbsp; {{user.lastname}} <br>
 {{user.email}}<br>
 <hr>
